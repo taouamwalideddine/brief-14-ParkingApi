@@ -67,7 +67,7 @@ public function search(Request $request)
     if ($request->has('location')) {
         $query->where('location', 'like', '%' . $request->location . '%');
     }
-&
+
     $parkings = $query->get();
     return response()->json($parkings);
 }
